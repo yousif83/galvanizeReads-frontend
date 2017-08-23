@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GALVANIZE READS</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav class="navbar  navbar-fixed-top" style="background-color: #312c32;">
+   <div class="container">
+     <div class="navbar-header">
+       <a class="navbar-brand logo" href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+            GALVANIZE READS </a>
+     </div>
+     <ul class="nav navbar-nav navbar-right">
+       hjhjhjhjhj
+          </ul>
+   </div>
+
+   <div class="container">
+
+               <ul class="nav navbar-nav ">
+                   <li ><a href="#" >BOOKS</a></li>
+                   <li ><a href="#" >AUTHORS</a></li>
+
+                   <li class="divider-vertical"></li>
+               </ul>
+           </div>
+
+  </nav>
+  <main class="container">
+    <form >
+    <div class="form-group newBookForm">
+      <label for="titleInput">Title</label>
+      <input type="text" class="form-control" id="titleInput" placeholder="book title">
+    </div>
+    <div class="form-group newBookForm">
+      <label for="genreInput">Genre</label>
+      <input type="text" class="form-control" id="genreInput" placeholder="javascript">
+    </div>
+    <div class="form-group newBookForm">
+      <label for="descTextarea">Description</label>
+      <textarea class="form-control" id="descTextarea" rows="3"></textarea>
+    </div>
+    <div class="form-group form-inline">
+      <label for="authorsRemoveSelect">Authors</label>
+      <div class="newBookForm">
+        <select multiple class="form-control" id="authorsRemoveSelect">
+
+        
+        </select>
+          <button id="removeAuthorBtn" type="button" name="button" class="btn btn-default">X </button>
+      </div>
+
+    </div>
+
+    <div class="form-group form-inline ">
+      <label for="authorAddSelect"></label>
+      <div class="newBookForm">
+        <select class="form-control " id="authorAddSelect">
+
+        </select>
+        <button id="addAuthorBtn" type="button" name="button" class="btn btn-default">Add Author</button>
+      </div>
+
+    </div>
+        <p><a id="" href="#" class="btn btn-lg btn-default bookBtn" role="button" >ADD BOOK</a></p>
+  </form>
+
+  </main>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="addBook.js" type="text/javascript">
+
+  </script>
+  </body>
+</html>
