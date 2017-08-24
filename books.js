@@ -1,3 +1,4 @@
+
 const baseURL = 'http://localhost:3000/'
 $(document).ready(function() {
 	$.get(`${baseURL}books`)
@@ -6,7 +7,9 @@ $(document).ready(function() {
 });
 
 
-
+$('#AddBookBtn').click(function(){
+  $('#AddBookBtn').attr('href', `addBook.html?id=${3}`)
+})
 
 
 function appendAuthorsToBook(){
@@ -24,6 +27,7 @@ function appendAuthorsToBook(){
 }
 
 function showAllBooks(data) {
+	console.log(data);
 	for (let i = 0; i < data.length; i++) {
     let booksInfo = `
     <div class="col-lg-4 col-sm-6 col-md-4">
@@ -33,7 +37,7 @@ function showAllBooks(data) {
         <h3>${data[i].title}</h3>
         <p class="bookAuthorsTag" id='${data[i].id}'></p>
         <p class="desc">${data[i].description}</p>
-        <p><a href="#" class="btn btn-default bookBtn" role="button" >EDIT</a> <a href="#" class="btn btn-default bookBtn" role="button">REMOVE</a></p>
+        <p><a href="editBook.html?id=${data[i].id}" class="btn btn-default bookBtn" role="button" >EDIT</a> <a href="#" class="btn btn-default bookBtn" role="button">REMOVE</a></p>
       </div>
     </div>
     </div>`

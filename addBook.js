@@ -5,7 +5,19 @@ $(document).ready(function() {
   .then(appendAuthors)
 
 });
+$('#bookbutton').click(function(){
 
+   var postData=createBodyNewBook()
+  $.ajax({
+		url: `${baseURL}books/add`,
+		type: 'POST',
+    contentType: 'application/json',
+		data: JSON.stringify(postData),
+		success: function() {
+      console.log('successs')
+		}
+	})
+})
 
 $('#addAuthorBtn').click(function(){
   var optionId=$( "#authorAddSelect" ).val()
@@ -28,6 +40,18 @@ function appendAuthors(data){
   }
 
 }
-// $("#authorAddSelect").change(function(){
-//   console.log($( "#authorAddSelect" ).val())
-// })
+
+function createBodyNewBook(){
+  var body={
+      title:$('#titleInput').val(),
+      genre:$('#genreInput').val(),
+      description:$('#descTextarea').val(),
+      cover:$('#urlInput').val(),
+      authors:[ ]
+    }
+    $("#authorsRemoveSelect > option").each(function() {
+      body.authors.push(parseInt(this.value));
+      console.log(this.text + ' ' + this.value);
+  });
+      return (body)
+}
