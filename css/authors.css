@@ -1,0 +1,23 @@
+#portrait {
+  height: 22vh;
+}
+
+.bio {
+  height: 15vh;
+  overflow-y: auto;
+}
+.booksByAuthor {
+  height: 21vh;
+  float: right;
+  width:65%;
+  overflow-y: auto;
+}
+
+.authorCard {
+  height: 53vh;
+  margin-bottom: 3vh;
+  /*margin-top: 3vh;*/
+  padding: 1%;
+  border: 1px solid silver;
+
+}
